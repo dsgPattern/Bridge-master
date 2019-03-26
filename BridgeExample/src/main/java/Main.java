@@ -11,10 +11,12 @@ public class Main {
         documents.add(faq);
         documents.add(book);
         documents.add(paper);
-        
-        BackwardsTextFormatter formatter=new BackwardsTextFormatter();
+
+        BackwardsTextFormatter backwardsTextFormatter=new BackwardsTextFormatter();
+        DoubleCharacterFormatter doubleFormatter=
+                new DoubleCharacterFormatter();
         for (Manuscript docs: documents) {
-            docs.Print(formatter);
+            docs.Print(doubleFormatter);
             System.out.println();
         }
 
